@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Three</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+        .container {
+            display: flex;
+            text-align: center;
+            min-height: 100vh;
+        }
+        .image {
+            flex: 1;
+            position: relative;
+            
+        }
+        .image img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+
+        }
+        .image h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #fff;
+            font-size: 60px;
+            margin-top: 50px;
+
+        }
+        .image p {
+            color: #fff;
+            font-size: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .login {
+            flex: 1;
+            position: relative;
+            
+        }
+        .login .log1,
+        .login .log2,
+        .login .log3 {
+            position: absolute;
+            z-index: -1;
+        }
+        .login .log1 {
+            top: 0;
+            right: 0;
+        }
+        .login .log2 {
+            bottom: 0;
+            right: 0;
+        }
+        .login .log3 { 
+            bottom: 0;
+            left: 0;
+
+        }
+        .login h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #009ee2;
+            margin-top: 30px;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+        form {
+            margin: 40px auto;
+            position: relative;
+            width: fit-content;
+        }
+        form input {
+            display: block;
+            height: 40px;
+            width: 25vw;
+            border-radius: 12px;
+            border: 2px solid #aaa;
+            padding: 5px;
+        }
+        form input:nth-child(2) {
+            margin-top: 30px;
+
+        }
+        form input:focus {
+            outline: none;
+            border-color: #009ee2;
+        }
+        form span {
+            color: #aaa;
+            position: absolute;
+            right: 0; 
+            margin-top: 15px;
+            font-size: 14px;
+
+        }
+        form input[type='submit'] {
+            width: 30%;
+            border: none;
+            color: white;
+            background-color: #009ee2;
+            font-size: 18px;
+            margin: 50px auto 0;
+            border-radius: 6px;
+            padding: 5px 10px;
+        }
+        .separate {
+            position: relative;
+            width: fit-content;
+            margin: auto;
+        }
+        .separate::before,
+        .separate::after {
+            content: '';
+            height: 1px;
+            width: 100px;
+            background-color: #aaa;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .separate::before {
+            right: -500%;
+        }
+        .separate::after {
+            right: 150%;
+        }
+        .social {
+            display: flex;
+            width: 50%;
+            margin: 50px auto;
+            justify-content: space-evenly;
+        }
+        .social div {
+            background-color: #e7f2f5;
+            padding: 7px 23px;
+            border-radius: 6px;
+        }
+        .social div img {
+            width: 35px;
+        }
+        .sign-in {
+            color: #666;
+            margin-top: 50px;
+        }
+        .sign-in span {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="2.png" alt="">
+            <h1>Travelista tours</h1>
+            <p>Travel is the only purchase that enriches you in ways beyond material wealth</p>
+        </div>
+        <div class="login">
+            <div class="content">
+                <img src="login_4.png" alt="" class="log1">
+                <img src="login_1.png" alt="" class="log2">
+                <img src="login_2.png" alt="" class="log3">
+            </div>
+            <h1>Welcome</h1>
+            <p>Login with Email</p>
+            <form>
+                <input type="email" name="email" placeholder="Email Id">
+                <input type="password" name="password" placeholder="Password">
+                <span>Forgot your password?</span>
+                <input type="submit" value="Login">
+            </form>
+            <div class="separate">
+                OR
+            </div>
+            <div class="social">
+                <div>
+                    <img src="google.png" alt="">
+                    
+                </div>
+                <div>
+                    <img src="facebook.png" alt="">
+                    
+                </div>
+                <div>
+                    <img src="apple.png">
+                    
+                </div>
+            </div>
+            <div class="sign-in">
+                Don't have account? <span>Register Now</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

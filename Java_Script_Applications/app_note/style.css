@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 650px;
+    margin: 20px auto;
+}
+form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    background-color: #eee;
+    height: 80px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+form input[type='text']{
+    height: 55%;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+form input[type='text']:focus {
+    outline: none; 
+}
+form input[type='submit']{
+    width: 80px;
+    height: 55%;
+    border: none;
+    background-color: #FF5722;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: .3s;
+    cursor: pointer;
+}
+form input[type='submit']:hover {
+    background-color: #b9330b;
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #eee;
+    min-height: 62px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.task {
+    min-height: 40px;
+    line-height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 20px;
+    user-select: none;
+    position: relative;
+    transition: .3s;
+}
+.task:hover {
+    background-color: rgba(201, 199, 199, 0.377);
+}
+.task.done {
+    opacity: .5;
+}
+.task span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FF5722;
+    color: white;
+    padding: 0 5px;
+    font-size: 15px;
+    border-radius: 10PX;
+    transition: .3s;
+    user-select: none;
+    cursor: pointer;
+}
+.task span:hover {
+    background-color: #b9330b;
+}
+.delete-all {
+    background-color: #FF5722;
+    color: white;
+    width: fit-content;
+    font-size: 25px;
+    padding: 5px 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+.delete-all:hover {
+    background-color: #b9330b;
+}
